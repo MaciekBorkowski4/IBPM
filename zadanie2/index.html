@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <div class="container">
+     <div class="row">
+         <div class="col-xs-4">
+             <h2> Aplikacja "Formularz"</h2>
+         </div>
+     </div>
+     <div class="row">
+
+         <form class="inputsForm">
+
+             <div class="form-group inputs">
+                 <label for="name"> Name </label>
+                 <input type="text" class="form-control" id="name" placeholder="Name">
+             </div>
+
+             <div class="form-group inputs">
+                 <label for="surname"> Surname </label>
+                 <input type="text" class="form-control" id="surname" placeholder="Surname">
+             </div>
+
+             <div class="form-group inputs">
+                 <label for="email"> E-mail </label>
+                 <input type="email" class="form-control" id="email" placeholder="E-mail">
+             </div>
+
+             <div class="form-group inputs">
+                 <label for="password"> Password </label>
+                 <input type="password" class="form-control" id="password" placeholder="Password">
+             </div>
+
+             <div class="radio">
+                 <label>
+                     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                     Preferuję piwa rzemieślnicze i regionalne
+                 </label>
+             </div>
+
+             <div class="radio">
+                 <label>
+                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                     Nie obchodzi mnie, piję koncerniaki
+                 </label>
+             </div>
+            <p>Browary rzemieślnicze i regionalne, które polecam to:</p>
+             <div class="checkbox">
+                 <label>
+                     <input type="checkbox"> Pinta
+                 </label>
+             </div>
+
+             <div class="checkbox">
+                 <label>
+                     <input type="checkbox"> Kormoran
+                 </label>
+             </div>
+
+             <div class="checkbox">
+                 <label>
+                     <input type="checkbox"> Inne Beczki
+                 </label>
+             </div>
+
+             <div class="checkbox">
+                 <label>
+                     <input type="checkbox"> Ale Browar
+                 </label>
+             </div>
+
+             <div class="checkbox">
+                 <label>
+                     <input type="checkbox"> Wrężel
+                 </label>
+             </div>
+
+             <div class="checkbox">
+                 <label>
+                     <input type="checkbox"> Amber
+                 </label>
+             </div>
+
+             <div class="form-group inputs">
+                 <label for="information">Dodatkowe informacje:</label>
+                 <textarea class="form-control" rows="5" id="information"></textarea>
+             </div>
+             <button type="submit" class="btn btn-primary submitButton"> Wyślij </button>
+         </form>
+
+     </div>
+ </div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
