@@ -44,13 +44,11 @@
                 <div class="form-group inputs">
                     <label for="password"> Hasło </label>
                     <input type="password" class="form-control" id="password" placeholder="Hasło">
-                    <span class="validationInfo"></span>
                 </div>
 
                 <div class="form-group inputs">
                     <label for="orderLabel"> Zamówienie - marka piwa </label>
                     <input type="text" class="form-control" id="orderLabel" placeholder="Marka piwa">
-                    <span class="validationInfo"></span>
                 </div>
 
                 <div class="form-group inputs">
@@ -67,17 +65,17 @@
                 <button type="submit" class="btn btn-primary submitButton"> Wyślij</button>
             </form>
         </div>
+
         <div class="col-md-6">
             <h3>Twoje zamówienie</h3>
-            <ul class="orderList">
-                <li> ... </li>
-            </ul>
+            <ul class="orderList"></ul>
         </div>
 
 
         <div class="row">
             <div class="col-md-3">
                 <h4>Preferujesz piwa rzemieślnicze i regionalne czy koncernowe?</h4>
+                <form>
                 <div class="radio">
                     <label>
                         <input type="radio" name="optionsRadios" id="optionsRadios1">
@@ -91,11 +89,13 @@
                         Nie obchodzi mnie, piję koncerniaki
                     </label>
                 </div>
+                </form>
             </div>
 
 
             <div class="col-md-3">
                 <h4>Wskaż, które browary rzemieślnicze i regionalne najbardziej lubisz i polecasz</h4>
+                <form>
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" id="pinta"> Pinta
@@ -131,12 +131,21 @@
                         <input type="checkbox"> Amber
                     </label>
                 </div>
+                </form>
             </div>
 
 
 
         </div>
 
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM90NuYz0XAAYlBSxp12rhoXv7bJpfliI&libraries=places&callback=initAutocomplete"
+                    async defer></script>
+        </div>
     </div>
 
 </div>
