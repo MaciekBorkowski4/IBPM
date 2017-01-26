@@ -2,20 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Zadanie 2</title>
+
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="stylesAPI.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/stylesAPI.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid main">
     <div class="row">
-        <div class="col-md-12">
-            <h2> Formularz zamówienia piwa</h2>
-        </div>
+        <div class="col-md-12 header">
+            <h1> "Gorzki smak życia"</h1>
+            <h2> Hurtownia piwa </h2>
+    </div>
     </div>
     <div class="row">
         <div class="col-md-6">
@@ -63,8 +68,9 @@
                     <textarea class="form-control" rows="5" id="textArea"></textarea>
                     <span class="validationInfo"></span>
                 </div>
-                <button type="submit" class="btn btn-primary submitButton"> Wyślij</button>
+                <button type="submit" class="btn btn-primary submitButton"> Wyślij zamówienie</button>
             </form>
+            <p class="place">Wskaż miejsce, do którego dostarczymy zamówiony towar</p>
         </div>
 
         <div class="col-md-6">
@@ -75,6 +81,7 @@
 
         <div class="row">
             <div class="col-md-3">
+                <section class="questionnaire">
                 <h4>Preferujesz piwa rzemieślnicze i regionalne czy koncernowe?</h4>
                 <form>
                 <div class="radio">
@@ -91,10 +98,13 @@
                     </label>
                 </div>
                 </form>
+                </section>
             </div>
 
 
+
             <div class="col-md-3">
+                <section class="questionnaire">
                 <h4>Wskaż, które browary rzemieślnicze i regionalne najbardziej lubisz i polecasz</h4>
                 <form>
                 <div class="checkbox">
@@ -133,10 +143,8 @@
                     </label>
                 </div>
                 </form>
+            </section>
             </div>
-
-
-
         </div>
 
     </div>
@@ -147,11 +155,12 @@
 <input id="pac-input" class="controls" type="text" placeholder="Search Box">
 <div id="map"></div>
 
-<script src="scripts.js"></script>
+
+<script src="scripts/scripts.js"></script>
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM90NuYz0XAAYlBSxp12rhoXv7bJpfliI&libraries=places&callback=initAutocomplete"
         async defer></script>
-<script src="scriptsAPI.js"></script>
+<script src="scripts/scriptsAPI.js"></script>
 </body>
 </html>
