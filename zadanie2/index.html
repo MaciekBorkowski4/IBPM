@@ -5,97 +5,141 @@
     <title>Zadanie 2</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
 </head>
 <body>
- <div class="container">
-     <div class="row">
-         <div class="col-xs-4">
-             <h2> Formularz zamówienia piwa</h2>
-         </div>
-     </div>
-     <div class="row">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2> Formularz zamówienia piwa</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <h3>Wypełnij formularz zamówienia</h3>
+            </div>
+            <form class="inputsForm">
 
-         <form class="inputsForm">
+                <div class="form-group inputs">
+                    <label for="name"> Imię </label>
+                    <input type="text" class="form-control" id="name" placeholder="Imię">
+                    <span class="validationInfo"></span>
+                </div>
 
-             <div class="form-group inputs">
-                 <label for="name"> Name </label>
-                 <input type="text" class="form-control" id="name" placeholder="Name">
-             </div>
+                <div class="form-group inputs">
+                    <label for="surname"> Nazwisko </label>
+                    <input type="text" class="form-control" id="surname" placeholder="Nazwisko">
+                    <span class="validationInfo"></span>
+                </div>
 
-             <div class="form-group inputs">
-                 <label for="surname"> Surname </label>
-                 <input type="text" class="form-control" id="surname" placeholder="Surname">
-             </div>
+                <div class="form-group inputs">
+                    <label for="email"> E-mail </label>
+                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                    <span class="validationInfo"></span>
+                </div>
 
-             <div class="form-group inputs">
-                 <label for="email"> E-mail </label>
-                 <input type="email" class="form-control" id="email" placeholder="E-mail">
-             </div>
+                <div class="form-group inputs">
+                    <label for="password"> Hasło </label>
+                    <input type="password" class="form-control" id="password" placeholder="Hasło">
+                    <span class="validationInfo"></span>
+                </div>
 
-             <div class="form-group inputs">
-                 <label for="password"> Password </label>
-                 <input type="password" class="form-control" id="password" placeholder="Password">
-             </div>
+                <div class="form-group inputs">
+                    <label for="orderLabel"> Zamówienie - marka piwa </label>
+                    <input type="text" class="form-control" id="orderLabel" placeholder="Marka piwa">
+                    <span class="validationInfo"></span>
+                </div>
 
-             <div class="radio">
-                 <label>
-                     <input type="radio" name="optionsRadios" id="optionsRadios1">
-                     Preferuję piwa rzemieślnicze i regionalne
-                 </label>
-             </div>
+                <div class="form-group inputs">
+                    <label for="orderValue"> Zamówienie - ilość sztuk </label>
+                    <input type="text" class="form-control" id="orderValue" placeholder="Ilość sztuk">
+                    <span class="validationInfo"></span>
+                </div>
 
-             <div class="radio">
-                 <label>
-                     <input type="radio" name="optionsRadios" id="optionsRadios2">
-                     Nie obchodzi mnie, piję koncerniaki
-                 </label>
-             </div>
-            <p>Browary rzemieślnicze i regionalne, które polecam to:</p>
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox" id="pinta"> Pinta
-                 </label>
-             </div>
+                <div class="form-group inputs">
+                    <label for="textArea">Dodatkowe informacje:</label>
+                    <textarea class="form-control" rows="5" id="textArea"></textarea>
+                    <span class="validationInfo"></span>
+                </div>
+                <button type="submit" class="btn btn-primary submitButton"> Wyślij</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h3>Twoje zamówienie</h3>
+            <ul class="orderList">
+                <li> ... </li>
+            </ul>
+        </div>
 
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox" id="kormoran"> Kormoran
-                 </label>
-             </div>
 
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox" id="inneBeczki"> Inne Beczki
-                 </label>
-             </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Preferujesz piwa rzemieślnicze i regionalne czy koncernowe?</h4>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1">
+                        Preferuję piwa rzemieślnicze i regionalne
+                    </label>
+                </div>
 
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox"> Ale Browar
-                 </label>
-             </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2">
+                        Nie obchodzi mnie, piję koncerniaki
+                    </label>
+                </div>
+            </div>
 
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox"> Wrężel
-                 </label>
-             </div>
 
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox"> Amber
-                 </label>
-             </div>
+            <div class="col-md-3">
+                <h4>Wskaż, które browary rzemieślnicze i regionalne najbardziej lubisz i polecasz</h4>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="pinta"> Pinta
+                    </label>
+                </div>
 
-             <div class="form-group inputs">
-                 <label for="textArea">Dodatkowe informacje:</label>
-                 <textarea class="form-control" rows="5" id="textArea"></textarea>
-             </div>
-             <button type="submit" class="btn btn-primary submitButton"> Wyślij </button>
-         </form>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="kormoran"> Kormoran
+                    </label>
+                </div>
 
-     </div>
- </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="inneBeczki"> Inne Beczki
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Ale Browar
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Wrężel
+                    </label>
+                </div>
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Amber
+                    </label>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
 
 <script src="scripts.js"></script>
 </body>
